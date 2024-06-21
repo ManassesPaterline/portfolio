@@ -1,0 +1,203 @@
+element {
+    --project-color: rgb(73, 75, 77);
+}
+
+body {
+    background: rgb(61, 55, 66);
+    font-family: Rubik;
+}
+
+#container {
+    display: flex;
+}
+
+/* Side */
+
+#side_menu {
+    margin-left: 20px;
+    margin-top: 20px;
+    width: 400px;
+    height: 870px;
+    border-radius: 20px;
+    background: rgb(29, 28, 31);
+}
+
+#side_menu #profile_img {
+    margin-left: 30%;
+    margin-top: 10%;
+    width: 40%;
+    height: 18%;
+    border-radius: 100%;
+    border: 2px solid black;
+}
+
+#side_menu h4 {
+    margin-left: 32%;
+    color: white;
+}
+
+#side_menu a {
+    margin-left: 10px;
+    margin-top: 20px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+}
+
+#side_menu a:hover {
+    color: rgb(105, 105, 105);
+}
+
+#side_menu h6 {
+    margin-left: 45%;
+    margin-top: 90%;
+    color: white;
+}
+
+#side_menu .icons {
+    width: 50px;
+    height: 50px;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.contact_item{
+    display: flex;
+    align-items: center;
+}
+
+/* Main */
+
+#main_menu {
+    margin-left: 20px;
+    margin-top: 20px;
+    border-radius: 20px;
+    width: 76%;
+    height: 870px;
+    background-color: rgb(180, 180, 180);
+
+}
+
+#main_menu #nav_bar {
+    margin-left: 5%;
+    margin-top: 10px;
+    border-radius: 20px;
+    width: 90%;
+    height: 30px;
+    background-color: rgb(112, 112, 112);
+    display: flex;
+    align-items: center;
+}
+
+#main_menu nav {
+    margin-left: 2%;
+    display: inline;
+}
+
+#main_menu nav a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    border-radius: 10px;
+    transition: color 0.5s ease;
+}
+
+#main_menu nav a:hover {
+    color: rgb(85, 85, 85);
+}
+
+
+#main_menu #about_me {
+    margin-left: 80px;
+    margin-top: 80px;
+    color: white;
+}
+
+
+
+
+
+
+
+
+/* Projects */
+
+#main_menu #projects {
+    margin-left: 80px;
+    margin-top: 80px;
+    color: rgb(34, 34, 34);
+}
+
+#main_menu #projects #projects_selection {
+    width: 95%;
+    height: 350px;
+    margin-top: 8%;
+    display: flex;
+    overflow-x: auto;
+}
+
+#main_menu #projects_selection .project {
+    width: 200px;
+    height: 250px;
+    margin-top: 3%;
+    border-radius: 20px;
+    background-color: white;
+    flex-shrink: 0;
+}
+
+#main_menu #projects_selection #project_1 {
+    width: 200px;
+    height: 250px;
+    border-radius: 20px;
+    background-color: var(--project-color);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+#main_menu #projects_selection #project_2, #project_3, #project_4, #project_5, #project_6, #project_7, #project_8, #project_9, #project_10 {
+    margin-left: 40px;
+    width: 200px;
+    height: 250px;
+    border-radius: 20px;
+    background-color: var(--project-color);
+    overflow-x: auto;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+
+/* Estilos para a barra de rolagem */
+
+#main_menu #projects #projects_selection::-webkit-scrollbar {
+    height: 12px; /* Altura da barra de rolagem horizontal */
+}
+
+#main_menu #projects #projects_selection::-webkit-scrollbar-track {
+    background: rgb(223, 223, 223); /* Cor do trilho da barra de rolagem */
+    border-radius: 10px;
+}
+
+#main_menu #projects #projects_selection::-webkit-scrollbar-thumb {
+    background: rgb(119, 119, 119); /* Cor do polegar da barra de rolagem */
+    border-radius: 10px;
+}
+
+#main_menu #projects #projects_selection::-webkit-scrollbar-thumb:hover {
+    background: rgb(73, 73, 73); /* Cor do polegar da barra de rolagem ao passar o mouse */
+}
+
+
+
+
+.project {
+    min-width: 200px;
+    height: 150px;
+    background-color: lightblue;
+    transition: transform 0.3s ease; /* Adiciona transição suave na transformação */
+}
+
+.project:hover {
+    transform: translateY(-10px); /* Move o retângulo 10px para a esquerda  */
+}
+
+
+
+.project img {
+    border-radius: 20px;
+}

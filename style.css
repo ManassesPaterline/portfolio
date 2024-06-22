@@ -3,6 +3,12 @@ element {
 }
 
 body {
+    background: rgb(219, 215, 215);
+    font-family: Rubik;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+body.dark-mode {
     background: rgb(61, 55, 66);
     font-family: Rubik;
 }
@@ -50,7 +56,7 @@ body {
 
 #side_menu h6 {
     margin-left: 45%;
-    margin-top: 90%;
+    margin-top: 70%;
     color: white;
 }
 
@@ -74,7 +80,7 @@ body {
     border-radius: 20px;
     width: 76%;
     height: 870px;
-    background-color: rgb(180, 180, 180);
+    background-color: rgb(68, 68, 68);
 
 }
 
@@ -109,7 +115,18 @@ body {
 #main_menu #about_me {
     margin-left: 80px;
     margin-top: 80px;
-    color: white;
+    color: rgb(228, 228, 228);
+}
+
+#main_menu h3 {
+    color: rgb(228, 228, 228);
+    line-height: 1.5;
+}
+
+#main_menu #technologies{
+    margin-left: 80px;
+    margin-top: 10%;
+    color: rgb(228, 228, 228);
 }
 
 
@@ -124,7 +141,11 @@ body {
 #main_menu #projects {
     margin-left: 80px;
     margin-top: 80px;
-    color: rgb(34, 34, 34);
+    color: rgb(48, 47, 47);
+}
+
+#main_menu #projects h1, h6{
+    color: white;
 }
 
 #main_menu #projects #projects_selection {
@@ -140,7 +161,7 @@ body {
     height: 250px;
     margin-top: 3%;
     border-radius: 20px;
-    background-color: white;
+    background-color: rgb(54, 54, 54);
     flex-shrink: 0;
 }
 
@@ -200,4 +221,96 @@ body {
 
 .project img {
     border-radius: 20px;
+}
+
+
+
+
+
+/* Theme Toggle */
+
+.switch {
+    margin-left: 20px;
+    margin-top: 40px;
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #d1cdcd;
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: rgb(173, 173, 177);
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: rgb(91, 87, 94);
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+/* Detecta a preferência do usuário no sistema */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: black;
+        color: white;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    body {
+        background-color: white;
+        color: black;
+    }
+}
+
+#header-setup {
+    display: flex;
+}
+
+#programming_language {
+    border-radius: 10px;
+}
+
+#projectsText {
+    margin-top: 20px;
+    color: white;
+}
+
+.language-select {
+    margin-left: 1%;
+    margin-top: 30px;
+}
+
+#header-setup h4 {
+    color: white;
+    margin-left: 60%;
+    margin-top: 2%;
 }

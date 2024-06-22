@@ -32,21 +32,45 @@
                 <img src="img/email_icon.png" alt="email" class="icons">
                 <a href="mailto:manassespaterline@gmail.com" target="_blank">Email</a><br>
             </div>
+
+            <label class="switch">
+                <input type="checkbox" id="theme-toggle">
+                <span class="slider"></span>
+            </label>
             
-            <h6>2024</h6>
+            <h6>ⓒ 2024</h6>
         </div>
     
         <div id="main_menu">
             <div id="nav_bar">
                 <nav><a href="index.html">Sobre mim</a></nav>
-                <nav><a href="">Projetos</a></nav>
+                <nav><a href="" style="text-decoration: underline;">Projetos</a></nav>
             </div>
 
             <div id="projects">
-                <h1>Meus projetos</h1>
+                <div id="header-setup">
+                    <h1>Meus projetos</h1>
+
+                    <h4>filtro:</h4>
+
+                    <div class="language-select">
+                        <select id="programming_language" onchange="updateProjectsText()">
+                            <option value="all">Todos os projetos</option>
+                            <option value="c">C</option>
+                            <option value="cpp">C++</option>
+                            <option value="html-css">Html/Css</option>
+                            <option value="javascript">JavaScript</option>
+                            <option value="python">Python</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="projects-text" id="projectsText">
+                    Todos os projetos:
+                </div>
                 
                 <div id="projects_selection">
-                    <div id="project_1" class="project">
+                    <div id="project_1" class="project" data-language="python">
                         <a href="https://github.com/manassespaterline/pong_python" target="_blank"><img src="img/pong_project.png" alt="pong"></a>
                         <h6>Projeto: Pong / Linguagem: Python</h6>
                     </div>
@@ -82,6 +106,7 @@
         </div>
     </div>
 
-    
+    <script src="script.js"></script>
+
 </body>
 </html>

@@ -1,32 +1,4 @@
-// script.js
-
-// Seleciona o input do toggle switch
-const themeToggle = document.getElementById('theme-toggle');
-
-// Verifica se o modo escuro está ativo no localStorage
-if (localStorage.getItem('theme') === 'dark') {
-    document.body.classList.add('dark-mode');
-    themeToggle.checked = true;
-}
-
-// Adiciona um evento de mudança ao input do toggle switch
-themeToggle.addEventListener('change', () => {
-    document.body.classList.toggle('dark-mode');
-
-    // Salva a preferência do usuário no localStorage
-    if (document.body.classList.contains('dark-mode')) {
-        localStorage.setItem('theme', 'dark');
-    } else {
-        localStorage.setItem('theme', 'light');
-    }
-});
-
-
-
-
-
 // Filtro das linguagens dos projetos.
-
 function updateProjectsText() {
     const languageSelect = document.getElementById('programming_language');
     const projectsText = document.getElementById('projectsText');

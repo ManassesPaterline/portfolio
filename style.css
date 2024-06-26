@@ -2,302 +2,511 @@ element {
     --project-color: rgb(73, 75, 77);
 }
 
-
 body {
     background: rgba(27, 26, 26, 1);
     font-family: Rubik;
 }
 
-
-#container {
-    display: flex;
-}
-
 /* Side */
+@media only screen and (min-width: 801px) {
 
-#side_menu {
-    margin-left: 20px;
-    margin-top: 20px;
-    width: 400px;
-    height: 870px;
-    border-radius: 20px;
-    background: rgba(57, 60, 61, 1);
-}
+    #container {
+        display: flex;
+    }
 
-#side_menu #profile_img {
-    margin-left: 30%;
-    margin-top: 10%;
-    width: 40%;
-    height: 18%;
-    border-radius: 100%;
-    border: 2px solid rgba(27, 26, 26, 1);
-}
-
-#side_menu h4 {
-    margin-left: 32%;
-    color: white;
-}
-
-#side_menu a {
-    margin-left: 10px;
-    margin-top: 20px;
-    text-decoration: none;
-    font-size: 20px;
-    color: white;
-}
-
-#side_menu a:hover {
-    color: rgb(105, 105, 105);
-}
-
-#side_menu h6 {
-    margin-left: 45%;
-    margin-top: 90%;
-    color: white;
-}
-
-#side_menu .icons {
-    width: 50px;
-    height: 50px;
-    margin-left: 20px;
-    margin-top: 20px;
-}
-
-.contact_item{
-    display: flex;
-    align-items: center;
-}
-
-/* Main */
-
-#main_menu {
-    margin-left: 20px;
-    margin-top: 20px;
-    border-radius: 20px;
-    width: 76%;
-    height: 870px;
-    background-color: rgba(57, 60, 61, 1);
-
-}
-
-#main_menu #nav_bar {
-    margin-left: 5%;
-    margin-top: 10px;
-    border-radius: 20px;
-    width: 90%;
-    height: 30px;
-    background-color: rgba(29, 31, 32, 1);
-    display: flex;
-    align-items: center;
-}
-
-#main_menu nav {
-    margin-left: 2%;
-    display: inline;
-}
-
-#main_menu nav a {
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-    border-radius: 10px;
-    transition: color 0.5s ease;
-}
-
-#main_menu nav a:hover {
-    color: rgb(85, 85, 85);
-}
-
-
-#main_menu #about_me {
-    margin-left: 80px;
-    margin-top: 80px;
-    color: rgb(228, 228, 228);
-}
-
-#main_menu h3 {
-    color: rgb(228, 228, 228);
-    line-height: 1.5;
-}
-
-#main_menu #technologies{
-    margin-left: 80px;
-    margin-top: 10%;
-    color: rgb(228, 228, 228);
-}
-
-
-
-
-
-
-
-
-/* Projects */
-
-#main_menu #projects {
-    margin-left: 80px;
-    margin-top: 80px;
-    color: rgb(48, 47, 47);
-}
-
-#main_menu #projects_selection {
-    background-color: rgba(29, 31, 32, 1);
-    border-radius: 10px;
-}
-
-#main_menu #projects h1, h6{
-    color: white;
-}
-
-#main_menu #projects #projects_selection {
-    width: 95%;
-    height: 350px;
-    margin-top: 3%;
-    display: flex;
-    overflow-x: auto;
-}
-
-#main_menu #projects_selection .project {
-    width: 200px;
-    height: 250px;
-    margin-top: 3%;
-    border-radius: 20px;
-    margin-left: 1.5%;
-    margin-right: 1.5%;
-    background-color: rgb(54, 54, 54);
-    flex-shrink: 0;
-}
-
-#main_menu #projects_selection #project_1 {
-    width: 200px;
-    height: 250px;
-    border-radius: 20px;
-    background-color: var(--project-color);
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
-#main_menu #projects_selection #project_2, #project_3, #project_4, #project_5, #project_6, #project_7, #project_8, #project_9, #project_10 {
-    width: 200px;
-    height: 250px;
-    border-radius: 20px;
-    background-color: var(--project-color);
-    overflow-x: auto;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
-
-
-/* Estilos para a barra de rolagem */
-
-#main_menu #projects #projects_selection::-webkit-scrollbar {
-    height: 12px; /* Altura da barra de rolagem horizontal */
-}
-
-#main_menu #projects #projects_selection::-webkit-scrollbar-track {
-    background: rgb(223, 223, 223); /* Cor do trilho da barra de rolagem */
-    border-radius: 10px;
-}
-
-#main_menu #projects #projects_selection::-webkit-scrollbar-thumb {
-    background: rgb(119, 119, 119); /* Cor do polegar da barra de rolagem */
-    border-radius: 10px;
-}
-
-#main_menu #projects #projects_selection::-webkit-scrollbar-thumb:hover {
-    background: rgb(73, 73, 73); /* Cor do polegar da barra de rolagem ao passar o mouse */
-}
-
-
-
-
-.project {
-    min-width: 200px;
-    height: 150px;
-    background-color: lightblue;
-    transition: transform 0.3s ease; /* Adiciona transição suave na transformação */
-}
-
-.project:hover {
-    transform: translateY(-10px); /* Move o retângulo 10px para a esquerda  */
-}
-
-.project img {
-    border-radius: 20px;
-}
-
-
-
-
-
-/* Theme Toggle */
-
-.switch {
-    margin-left: 20px;
-    margin-top: 40px;
-    position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 34px;
-}
-
-.switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
-
-.slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #d1cdcd;
-    transition: 0.4s;
-    border-radius: 34px;
-}
-
-.slider:before {
-    position: absolute;
-    content: "";
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
-    background-color: rgb(173, 173, 177);
-    transition: 0.4s;
-    border-radius: 50%;
-}
-
-input:checked + .slider {
-    background-color: rgb(91, 87, 94);
-}
-
-input:checked + .slider:before {
-    transform: translateX(26px);
+    #side_menu {
+        margin-left: 20px;
+        margin-top: 20px;
+        width: 400px;
+        height: 870px;
+        border-radius: 20px;
+        background: rgba(57, 60, 61, 1);
+    }
+    
+    #side_menu #profile_img {
+        margin-left: 30%;
+        margin-top: 10%;
+        width: 40%;
+        height: 18%;
+        border-radius: 100%;
+        border: 2px solid rgba(27, 26, 26, 1);
+    }
+    
+    #side_menu h4 {
+        margin-left: 32%;
+        color: white;
+    }
+    
+    #side_menu a {
+        margin-left: 10px;
+        margin-top: 20px;
+        text-decoration: none;
+        font-size: 20px;
+        color: white;
+    }
+    
+    #side_menu a:hover {
+        color: rgb(105, 105, 105);
+    }
+    
+    #side_menu h6 {
+        margin-left: 45%;
+        margin-top: 90%;
+        color: white;
+    }
+    
+    #side_menu .icons {
+        width: 50px;
+        height: 50px;
+        margin-left: 20px;
+        margin-top: 20px;
+    }
+    
+    .contact_item{
+        display: flex;
+        align-items: center;
+    }
+    
+    /* Main */
+    
+    #main_menu {
+        margin-left: 20px;
+        margin-top: 20px;
+        border-radius: 20px;
+        width: 76%;
+        height: 870px;
+        background-color: rgba(57, 60, 61, 1);
+    
+    }
+    
+    #main_menu #nav_bar {
+        margin-left: 5%;
+        margin-top: 10px;
+        border-radius: 20px;
+        width: 90%;
+        height: 30px;
+        background-color: rgba(29, 31, 32, 1);
+        display: flex;
+        align-items: center;
+    }
+    
+    #main_menu nav {
+        margin-left: 2%;
+        display: inline;
+    }
+    
+    #main_menu nav a {
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+        border-radius: 10px;
+        transition: color 0.5s ease;
+    }
+    
+    #main_menu nav a:hover {
+        color: rgb(85, 85, 85);
+    }
+    
+    
+    #main_menu #about_me {
+        margin-left: 80px;
+        margin-top: 80px;
+        color: rgb(228, 228, 228);
+    }
+    
+    #main_menu h3 {
+        color: rgb(228, 228, 228);
+        line-height: 1.5;
+    }
+    
+    #main_menu #technologies{
+        margin-left: 80px;
+        margin-top: 10%;
+        color: rgb(228, 228, 228);
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    /* Projects */
+    
+    #main_menu #projects {
+        margin-left: 80px;
+        margin-top: 80px;
+        color: rgb(48, 47, 47);
+    }
+    
+    #main_menu #projects_selection {
+        background-color: rgba(29, 31, 32, 1);
+        border-radius: 10px;
+    }
+    
+    #main_menu #projects h1, h6{
+        color: white;
+    }
+    
+    #main_menu #projects #projects_selection {
+        width: 95%;
+        height: 350px;
+        margin-top: 3%;
+        display: flex;
+        overflow-x: auto;
+    }
+    
+    #main_menu #projects_selection .project {
+        width: 200px;
+        height: 250px;
+        margin-top: 3%;
+        border-radius: 20px;
+        margin-left: 1.5%;
+        margin-right: 1.5%;
+        background-color: rgb(54, 54, 54);
+        flex-shrink: 0;
+    }
+    
+    #main_menu #projects_selection #project_1 {
+        width: 200px;
+        height: 250px;
+        border-radius: 20px;
+        background-color: var(--project-color);
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+    #main_menu #projects_selection #project_2, #project_3, #project_4, #project_5, #project_6, #project_7, #project_8, #project_9, #project_10 {
+        width: 200px;
+        height: 250px;
+        border-radius: 20px;
+        background-color: var(--project-color);
+        overflow-x: auto;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+    
+    
+    /* Estilos para a barra de rolagem */
+    
+    #main_menu #projects #projects_selection::-webkit-scrollbar {
+        height: 12px; /* Altura da barra de rolagem horizontal */
+    }
+    
+    #main_menu #projects #projects_selection::-webkit-scrollbar-track {
+        background: rgb(223, 223, 223); /* Cor do trilho da barra de rolagem */
+        border-radius: 10px;
+    }
+    
+    #main_menu #projects #projects_selection::-webkit-scrollbar-thumb {
+        background: rgb(119, 119, 119); /* Cor do polegar da barra de rolagem */
+        border-radius: 10px;
+    }
+    
+    #main_menu #projects #projects_selection::-webkit-scrollbar-thumb:hover {
+        background: rgb(73, 73, 73); /* Cor do polegar da barra de rolagem ao passar o mouse */
+    }
+    
+    
+    
+    
+    .project {
+        min-width: 200px;
+        height: 150px;
+        background-color: lightblue;
+        transition: transform 0.3s ease; /* Adiciona transição suave na transformação */
+    }
+    
+    .project:hover {
+        transform: translateY(-10px); /* Move o retângulo 10px para a esquerda  */
+    }
+    
+    .project img {
+        border-radius: 20px;
+    }
+    
+    
+    
+    
+    
+    #header-setup {
+        display: flex;
+    }
+    
+    #programming_language {
+        border-radius: 10px;
+    }
+    
+    #projectsText {
+        margin-top: 20px;
+        color: white;
+    }
+    
+    .language-select {
+        margin-left: 1%;
+        margin-top: 30px;
+    }
+    
+    #header-setup h4 {
+        color: white;
+        margin-left: 60%;
+        margin-top: 2%;
+    }
 }
 
 
 
-#header-setup {
-    display: flex;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 800px) {
+    #side_menu {
+        margin-left: 20px;
+        margin-top: 20px;
+        width: 90%;
+        height: 300px;
+        border-radius: 20px;
+        background: rgba(57, 60, 61, 1);
+    }
+    
+    #side_menu #profile_img {
+        margin-left: 35%;
+        margin-top: 5%;
+        width: 140px;
+        height: 140px;
+        border-radius: 100%;
+        border: 2px solid rgba(27, 26, 26, 1);
+    }
+    
+    #side_menu h4 {
+        margin-left: 35%;
+        color: white;
+    }
+    
+    #side_menu a {
+        margin-left: 10px;
+        /* margin-top: 10px; */
+        text-decoration: none;
+        font-size: 16px;
+        color: white;
+    }
+    
+    #side_menu a:hover {
+        color: rgb(105, 105, 105);
+    }
+    
+    #side_menu h6 {
+        margin-left: 45%;
+        /* margin-top: 70%; */
+        color: white;
+    }
+    
+    #side_menu .icons {
+        width: 50px;
+        height: 50px;
+        margin-left: 30px;
+    }
+    
+    .contact_item{
+        display: inline;
+        align-items: center;
+    }
+    
+    /* Main */
+    
+    #main_menu {
+        margin-left: 20px;
+        margin-top: 20px;
+        border-radius: 20px;
+        width: 90%;
+        height: 870px;
+        background-color: rgba(57, 60, 61, 1);
+    
+    }
+    
+    #main_menu #nav_bar {
+        margin-left: 5%;
+        margin-top: 10px;
+        border-radius: 20px;
+        width: 90%;
+        height: 30px;
+        background-color: rgba(29, 31, 32, 1);
+        display: flex;
+        align-items: center;
+    }
+    
+    #main_menu nav {
+        margin-left: 2%;
+        display: inline;
+    }
+    
+    #main_menu nav a {
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+        border-radius: 10px;
+        transition: color 0.5s ease;
+    }
+    
+    #main_menu nav a:hover {
+        color: rgb(85, 85, 85);
+    }
+    
+    
+    #main_menu #about_me {
+        margin-left: 80px;
+        margin-top: 80px;
+        color: rgb(228, 228, 228);
+    }
+    
+    #main_menu h3 {
+        color: rgb(228, 228, 228);
+        line-height: 1.5;
+    }
+    
+    #main_menu #technologies{
+        margin-left: 80px;
+        margin-top: 10%;
+        color: rgb(228, 228, 228);
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    /* Projects */
+    
+    #main_menu #projects {
+        margin-left: 80px;
+        margin-top: 80px;
+        color: rgb(48, 47, 47);
+    }
+    
+    #main_menu #projects_selection {
+        background-color: rgba(29, 31, 32, 1);
+        border-radius: 10px;
+    }
+    
+    #main_menu #projects h1, h6{
+        color: white;
+    }
+    
+    #main_menu #projects #projects_selection {
+        width: 95%;
+        height: 350px;
+        margin-top: 3%;
+        display: flex;
+        overflow-x: auto;
+    }
+    
+    #main_menu #projects_selection .project {
+        width: 200px;
+        height: 250px;
+        margin-top: 3%;
+        border-radius: 20px;
+        margin-left: 1.5%;
+        margin-right: 1.5%;
+        background-color: rgb(54, 54, 54);
+        flex-shrink: 0;
+    }
+    
+    #main_menu #projects_selection #project_1 {
+        width: 200px;
+        height: 250px;
+        border-radius: 20px;
+        background-color: var(--project-color);
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+    #main_menu #projects_selection #project_2, #project_3, #project_4, #project_5, #project_6, #project_7, #project_8, #project_9, #project_10 {
+        width: 200px;
+        height: 250px;
+        border-radius: 20px;
+        background-color: var(--project-color);
+        overflow-x: auto;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+    
+    
+    /* Estilos para a barra de rolagem */
+    
+    #main_menu #projects #projects_selection::-webkit-scrollbar {
+        height: 12px; /* Altura da barra de rolagem horizontal */
+    }
+    
+    #main_menu #projects #projects_selection::-webkit-scrollbar-track {
+        background: rgb(223, 223, 223); /* Cor do trilho da barra de rolagem */
+        border-radius: 10px;
+    }
+    
+    #main_menu #projects #projects_selection::-webkit-scrollbar-thumb {
+        background: rgb(119, 119, 119); /* Cor do polegar da barra de rolagem */
+        border-radius: 10px;
+    }
+    
+    #main_menu #projects #projects_selection::-webkit-scrollbar-thumb:hover {
+        background: rgb(73, 73, 73); /* Cor do polegar da barra de rolagem ao passar o mouse */
+    }
+    
+    
+    
+    
+    .project {
+        min-width: 200px;
+        height: 150px;
+        background-color: lightblue;
+        transition: transform 0.3s ease; /* Adiciona transição suave na transformação */
+    }
+    
+    .project:hover {
+        transform: translateY(-10px); /* Move o retângulo 10px para a esquerda  */
+    }
+    
+    .project img {
+        border-radius: 20px;
+    }
+    
+    
+    
+    
+    
+    
+    #header-setup {
+        display: flex;
+    }
+    
+    #programming_language {
+        border-radius: 10px;
+    }
+    
+    #projectsText {
+        margin-top: 20px;
+        color: white;
+    }
+    
+    .language-select {
+        margin-left: 1%;
+        margin-top: 30px;
+    }
+    
+    #header-setup h4 {
+        color: white;
+        margin-left: 60%;
+        margin-top: 2%;
+    }
 }
 
-#programming_language {
-    border-radius: 10px;
-}
-
-#projectsText {
-    margin-top: 20px;
-    color: white;
-}
-
-.language-select {
-    margin-left: 1%;
-    margin-top: 30px;
-}
-
-#header-setup h4 {
-    color: white;
-    margin-left: 60%;
-    margin-top: 2%;
-}
